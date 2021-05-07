@@ -1,24 +1,24 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## menus テーブル
 
-Things you may want to cover:
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| style              | string     | null: false                    |
+| material           | string     | null: false                    |
+| feeling            | string     | null: false                    |
+| name_id            | references | null: false, foreign_key: true |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :foods
 
-* Configuration
+## items テーブル
 
-* Database creation
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| name             | string     | null: false                    |
 
-* Database initialization
+### Association
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- has_one :menu
